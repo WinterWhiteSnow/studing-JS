@@ -23,11 +23,9 @@ function clickClick(event) {
 	
 	if (screenX/2 > X) {
 		body.style.backgroundColor = "green";
-		console.log("short!")
 	}
 	else{
 		body.style.backgroundColor = "grey";
-		console.log("long!")
 	}
 	game+=1
 	saveNumber();
@@ -46,4 +44,4 @@ function making() {
 }
 
 window.addEventListener("click", clickClick)
-setInterval(making, 1000);
+setInterval(making, 500);
