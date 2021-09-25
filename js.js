@@ -14,10 +14,12 @@ function saveNumber(){
 	localStorage.setItem(clickNumber,game);
 }
 
-function clickClick() {	
+function clickClick(event) {
+	// location.reload(true);
+	console.dir(event)	
+	console.log(window)
 	game+=1
 	saveNumber();
-	location.reload(true);
 }
 
 const span = document.createElement("span");
