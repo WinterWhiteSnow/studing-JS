@@ -66,8 +66,15 @@ function login(event){
 	inputId.value=""
 	inputPW.value=""
 	userList.push(ob)
-	console.log(userList)
-	
+	if (userList.length>0){
+		for (let i = 0; i<userList.length; i++){
+			if (inputId.value === userList[i]["id"])
+			{console.log("wow")}
+			else{
+				console.log(userList[i]["id"],"wowwow");
+			}
+		}
+	}
 }
 form.addEventListener("submit",login)
 window.addEventListener("click", clickClick)
