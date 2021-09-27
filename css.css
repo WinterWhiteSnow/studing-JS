@@ -1,3 +1,27 @@
 body {
-	background-color: black;
+	background-color: beige;
+}
+
+
+header, h4 {
+	text-align: center;
+	font-size: 50px;
+}
+
+.login {
+	text-align: right;
+}
+
+.id, .passward{
+	width: 150px;
+	height: 30px;
+}
+.submit {
+	width: 100px;
+	height: 50px;
+	position:absolute;
+}
+
+span.apple {
+	text-align: center;
 }
