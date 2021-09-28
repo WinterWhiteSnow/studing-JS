@@ -1,14 +1,5 @@
-const title = document.querySelector("header");
-const body = document.querySelector("body");
-const count = document.querySelector("h4.count");
-const main = document.querySelector("main.login");
-const inputId = document.querySelector(".id");
-const inputPW = document.querySelector(".passward");
-const submitButton = document.querySelector(".submit");
-const form = document.querySelector(".login-form")
 
-
-main.style.marginRight=`${inputId.scrollWidth/2+30}px`;
+loginForm.style.marginRight=`${inputId.scrollWidth/2+30}px`;
 submitButton.style.height=`${inputId.offsetHeight+inputPW.offsetHeight}px`;
 title.style.color = "white";
 title.style.fontSize = "40px";
@@ -54,7 +45,7 @@ function making() {
 	// console.log(window.outerWidth);
 }
 
-function login(event){
+function sign(event){
 	event.preventDefault();
 	const id = inputId.value;
 	const pw = inputPW.value;
@@ -66,6 +57,9 @@ function login(event){
 	inputId.value=""
 	inputPW.value=""
 	userList.push(ob)
+}
+
+function login(){
 	if (userList.length>0){
 		for (let i = 0; i<userList.length; i++){
 			if (inputId.value === userList[i]["id"])
@@ -75,8 +69,13 @@ function login(event){
 			}
 		}
 	}
+	else{
+		alert("회원정보가 없습니다, 가입을 완료하세요.")
+	}
 }
-form.addEventListener("submit",login)
+
+signForm.addEventListener("submit",sign)
+loginForm.addEventListener("submit",login)
 window.addEventListener("click", clickClick)
 
 setInterval(making, 100);
