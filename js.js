@@ -8,9 +8,13 @@ const clickNumber = "clickNumber";
 const userInfo = "userinfo"
 
 let userList=[]
+// const saveUserList = JSON.parse(localStorage.getItem(userInfo))
+// if(saveUser) {
+// 	userList = saveUserList
+// }
 
 let game = 0;
-const save = parseInt(localStorage.getItem(clickNumber,game));
+const save = parseInt(localStorage.getItem(clickNumber));
 if (save) {
 	game = save;
 }
@@ -54,24 +58,25 @@ function sign(event){
 	event.preventDefault();
 	const id = inputId.value;
 	const pw = inputPW.value;
-	ob = {
+	savelist = {
 		id:id,
 		pw:pw,
 		usercode:Date.now()
 	}
 	inputId.value=""
 	inputPW.value=""
-	userList.push(ob)
+	userList.push(savelist)
 	saveUser()
 }
 
-function login(){
+function login(event){
+	event.preventDefault()
 	if (userList.length>0){
 		for (let i = 0; i<userList.length; i++){
-			if (inputId.value === userList[i]["id"])
-			{console.log("wow")}
+			if (loginID.value == userList[i]["id"] && loginPW.value == userList[i]["pw"])
+			{alert("반갑습니다" +inputId.value+" 님!")}
 			else{
-				console.log(userList[i]["id"],"wowwow");
+				alert("아이디와 비밀번호를 확인해주세요.")
 			}
 		}
 	}
