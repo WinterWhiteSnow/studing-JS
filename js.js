@@ -1,4 +1,3 @@
-
 loginForm.style.marginRight=`${inputId.scrollWidth/2+30}px`;
 submitButton.style.height=`${inputId.offsetHeight+inputPW.offsetHeight}px`;
 title.style.color = "white";
