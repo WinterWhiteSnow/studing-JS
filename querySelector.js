@@ -7,3 +7,4 @@ const inputPW = document.querySelector(".passward");
 const submitButton = document.querySelector(".submit");
 const signForm = document.querySelector(".signup-form")
 const loginForm = document.querySelector(".login-form")
+const loginButton = document.querySelector(".login-form button")

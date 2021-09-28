@@ -1,9 +1,11 @@
 loginForm.style.marginRight=`${inputId.scrollWidth/2+30}px`;
 submitButton.style.height=`${inputId.offsetHeight+inputPW.offsetHeight}px`;
+loginButton.style.height=`${inputId.offsetHeight+inputPW.offsetHeight}px`;
 title.style.color = "white";
 title.style.fontSize = "40px";
 count.style.color = "white";
 const clickNumber = "clickNumber";
+const userInfo = "userinfo"
 
 let userList=[]
 
@@ -15,6 +17,10 @@ if (save) {
 
 function saveNumber(){
 	localStorage.setItem(clickNumber,game);
+}
+
+function saveUser(){
+	localStorage.setItem(userInfo,JSON.stringify(userList))
 }
 
 function clickClick(event) {
@@ -56,6 +62,7 @@ function sign(event){
 	inputId.value=""
 	inputPW.value=""
 	userList.push(ob)
+	saveUser()
 }
 
 function login(){
