@@ -69,23 +69,47 @@ function sign(event){
 	saveUser()
 }
 
+function findUser(apple) {
+    return apple === true;
+}
+
+function findUser2(banana){
+	return banana === false;
+}
+let response = []
 function login(event){
 	event.preventDefault()
 	if (userList.length>0){
 		for (let i = 0; i<userList.length; i++){
 			if (loginID.value == userList[i]["id"] && loginPW.value == userList[i]["pw"])
-			{alert("반갑습니다" +inputId.value+" 님!")}
+			{return response.push(true)}
 			else{
-				alert("아이디와 비밀번호를 확인해주세요.")
+				return response.push(false)
 			}
 		}
 	}
 	else{
-		alert("회원정보가 없습니다, 가입을 완료하세요.")
+		return response.push(undefined)
 	}
+	console.log(response)
 	loginID.value=""
 	loginPW.value=""
+	if (response.find(findUser)){
+		alert("환영합니다!")
+	}
+	else if (response.find(findUser2)){
+		alert("으잉")
+	}
+	else{
+		alert(response)
+	}
 }
+
+
+
+
+
+
 
 signForm.addEventListener("submit",sign)
 loginForm.addEventListener("submit",login)
