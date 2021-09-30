@@ -8,10 +8,10 @@ const clickNumber = "clickNumber";
 const userInfo = "userinfo"
 
 let userList=[]
-// const saveUserList = JSON.parse(localStorage.getItem(userInfo))
-// if(saveUser) {
-// 	userList = saveUserList
-// }
+const saveUserList = JSON.parse(localStorage.getItem(userInfo))
+if(saveUserList) {
+	userList = saveUserList
+}
 
 let game = 0;
 const save = parseInt(localStorage.getItem(clickNumber));
@@ -83,6 +83,8 @@ function login(event){
 	else{
 		alert("회원정보가 없습니다, 가입을 완료하세요.")
 	}
+	loginID.value=""
+	loginPW.value=""
 }
 
 signForm.addEventListener("submit",sign)
