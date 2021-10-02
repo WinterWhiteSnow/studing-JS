@@ -1,2 +1,3 @@
-wow = 24
-print(wow[0])
+wow = "2"
+no = "4"
+print(wow+no)
