@@ -129,30 +129,31 @@
 # 	except:
 # 		break
 
-import sys
-wow = int(sys.stdin.readline())
-count = 0
-a = wow
-while True:
-	try:
-		if 0<= a<=99:
-			if a <10:
-				a = f"0{a}"
-			else:
-				a = f"{a}"
-			a1=int(a[0])+int(a[1])#8
-			a2=a[1]+f"{a1}"#68
-			a2=int(a2)
-			print(a2,wow)
-			if a2 == wow:
-				print(count)
-				break
-			else:
-				print(f"이제{count}번째")
-				count+=1
-				a=a2
-		else:
-			break
-	except:
-		break
-#백준 while문 3번째
+# import sys
+# wow = int(sys.stdin.readline())
+# count = 1
+# a = wow
+# while True:
+# 	try:
+# 		if 0<= a<=99:
+# 			if a <10:
+# 				a = f"0{a}"
+# 			else:
+# 				a = f"{a}"
+# 			a1=int(a[0])+int(a[1])#8
+# 			if a1 < 10:
+# 				a1 = f"0{a1}"
+# 			else:
+# 				a1 = f"{a1}"
+# 			a2=a[1]+a1[1]#68
+# 			a2=int(a2)
+# 			if a2 == wow:
+# 				print(count)
+# 				break
+# 			else:
+# 				count+=1
+# 				a=a2
+# 		else:
+# 			break
+# 	except:
+# 		break
