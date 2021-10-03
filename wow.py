@@ -242,32 +242,45 @@
 # 		relative_error = sum(num_list)/the_number*100
 # 		absolute_error = (relative_error-result)/relative_error*100
 # 		print(round(result,6))
-
 # how()	
 		
+# import sys
+# the_number = int(sys.stdin.readline())
+# answer_list = []
+# def how():
+# 	wow = sys.stdin.readline()
+# 	answer_list.append(wow)
+# 	if len(answer_list) !=the_number:
+# 		how()
+# 	else:
+# 		for l in answer_list:
+# 			split_list = l.strip("\n").split("X")
+# 			count = 0
+# 			count_o = []
+# 			for i in split_list:
+# 				count_o.append(len(i))
+# 			count = 0
+# 			for i in count_o:
+# 				if i>=2:
+# 					for a in range(i+1):
+# 						count+=a
+# 				elif i==0:
+# 					pass		
+# 				else:
+# 					count+=1
+# 			print(count)			
+# how()	
+
 import sys
-the_number = int(sys.stdin.readline())
+the_number = 2
 answer_list = []
 def how():
-	wow = sys.stdin.readline()
-	answer_list.append(wow)
-	if len(answer_list) !=the_number:
-		how()
-	else:
-		for l in answer_list:
-			split_list = l.strip("\n").split("X")
-			count = 0
-			count_o = []
-			for i in split_list:
-				count_o.append(len(i))
-			count = 0
-			for i in count_o:
-				if i>=2:
-					for a in range(i+1):
-						count+=a
-				elif i==0:
-					pass		
-				else:
-					count+=1
-			print(count)			
-how()	
+	answer = sys.stdin.readline().split(" ")
+	student_num = int(answer[0])
+	if len(answer) == student_num+1:
+		answer_list.append(answer)
+		if len(answer_list) !=the_number:
+			how()
+		else:
+			print(answer_list)
+how()
