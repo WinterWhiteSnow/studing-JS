@@ -157,3 +157,117 @@
 # 			break
 # 	except:
 # 		break
+
+# import sys
+# the_number = int(sys.stdin.readline())
+# def how():
+# 	wow = sys.stdin.readline().split(" ")
+# 	if len(wow) !=the_number:
+# 		how()
+# 	else:
+# 		wow_int = [int(i) for i in wow]
+# 		wow_int.sort()
+# 		max_num = wow_int[-1]
+# 		mini_num = wow_int[0]
+# 		result = [mini_num,max_num]
+# 		return result
+
+# a = how()
+# print(a[0],a[-1])
+
+# import sys
+# the_number = 9
+# num_list = []
+# result = []
+# def how():
+# 	wow = int(sys.stdin.readline())
+# 	if wow<100:
+# 		num_list.append(wow)
+# 		if len(num_list) !=the_number:
+# 			how()
+# 		else:
+# 			wow_sort = sorted(num_list)
+# 			max_num = wow_sort[-1]
+# 			count = num_list.index(max_num)+1
+# 			result.append(max_num)
+# 			result.append(count)	
+# how()
+# for i in result:
+# 	print(i)
+
+# import sys
+# num_list=[]
+# count = []
+# def how():
+# 	wow = int(sys.stdin.readline())
+# 	if 100<=wow<1000:
+# 		num_list.append(wow)
+# 		if len(num_list) !=3:
+# 			how()
+# 		else:
+# 			bored = str(num_list[0]*num_list[1]*num_list[2])
+# 			for i in range(10):
+# 				count.append(i)
+# 			str_count = [str(i)for i in count]
+# 			for i in str_count:
+# 				print(bored.count(i))	
+# how()		
+
+# import sys
+# num_list=[]
+# result = []
+# def how():
+# 	wow = int(sys.stdin.readline())
+# 	if 1<=wow<1000:
+# 		num_list.append(wow)
+# 		if len(num_list) !=10:
+# 			how()
+# 		else:
+# 			for i in num_list:
+# 				if i%42 not in result:
+# 					result.append(i%42)		
+# how()
+# print(len(result))
+
+# import sys
+# the_number = int(sys.stdin.readline())
+# def how():
+# 	wow = sys.stdin.readline().split(" ")
+# 	if len(wow) !=the_number:#wow.count("0") >=2 or
+# 		how()
+# 	else:		
+# 		num_list = [int(i) for i in wow]
+# 		sort_list = sorted(num_list)
+# 		result = sum(num_list)/the_number/sort_list[-1]*100
+# 		relative_error = sum(num_list)/the_number*100
+# 		absolute_error = (relative_error-result)/relative_error*100
+# 		print(round(result,6))
+
+# how()	
+		
+import sys
+the_number = int(sys.stdin.readline())
+answer_list = []
+def how():
+	wow = sys.stdin.readline()
+	answer_list.append(wow)
+	if len(answer_list) !=the_number:
+		how()
+	else:
+		for l in answer_list:
+			split_list = l.strip("\n").split("X")
+			count = 0
+			count_o = []
+			for i in split_list:
+				count_o.append(len(i))
+			count = 0
+			for i in count_o:
+				if i>=2:
+					for a in range(i+1):
+						count+=a
+				elif i==0:
+					pass		
+				else:
+					count+=1
+			print(count)			
+how()	
