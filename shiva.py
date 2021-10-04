@@ -31,19 +31,15 @@
 wow = [1,4,5,6,7,8]
 a = "8457474524"
 b = ['o', 'o', 'o', 'oo']
-count_o = []
 result = []
-for i in b:
-	count_o.append(len(i))
-print(count_o)	
-count = 0
-for i in count_o:
-	if i>=2:
-		for a in range(i+1):
-			count+=a
-			print("a",a)
-	else:
-		count+=1
-print(count)				
+
+# print(count_o)	
+
+# print(count)				
 # for i in range(2+1):
 # 	print(i)
+c = [3,4,5,6]
+av =sum(c[1:])/c[0]
+for i in c[1:]:
+	c.append(i>av)
+print(c)

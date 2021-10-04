@@ -271,16 +271,39 @@
 # 			print(count)			
 # how()	
 
+# import sys
+# the_number = int(sys.stdin.readline())
+# answer_list = []
+# def how():
+# 	boolean_list=[]
+# 	answer = sys.stdin.readline().split(" ")
+# 	student_num = int(answer[0])
+# 	if len(answer) == student_num+1:
+# 		answer=[int(i) for i in answer]
+# 		ob = {
+# 			len(answer_list):answer
+# 		}
+# 		answer_list.append(ob)
+# 		if len(answer_list) !=the_number:
+# 			how()
+# 		else:
+# 			for i in answer_list:
+# 				all_values=list(i.values())[0]
+# 				calculation = round(sum(all_values[1:])/all_values[0],3)
+# 				keys = list(i.keys())[0]
+# 				tem_list = []
+# 				for a in all_values[1:]:
+# 					tem_list.append(a>calculation)
+# 				db = {
+# 					keys:tem_list
+# 				}
+# 				boolean_list.append(db)
+# 	if boolean_list:
+# 		for i in boolean_list:
+# 			boolean_values=list(i.values())[0]
+# 			result = boolean_values.count(True)/len(boolean_values)*100
+# 			print("{result:.3f}%".format(result=result))		
+# how()
+
 import sys
-the_number = 2
-answer_list = []
-def how():
-	answer = sys.stdin.readline().split(" ")
-	student_num = int(answer[0])
-	if len(answer) == student_num+1:
-		answer_list.append(answer)
-		if len(answer_list) !=the_number:
-			how()
-		else:
-			print(answer_list)
-how()
+the_number = int(sys.stdin.readline())
