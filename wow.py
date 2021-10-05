@@ -305,5 +305,57 @@
 # 			print("{result:.3f}%".format(result=result))		
 # how()
 
-import sys
-the_number = int(sys.stdin.readline())
+
+# the_number = input().split(" ")
+# def solve(wow):
+# 	a = [int(i) for i in wow]
+# 	if 1<=len(a)<=3000000:
+# 		a = sorted(a)
+# 		if 1<=a[0] and a[-1]<=3000000:
+# 			ans = sum(a)
+# 			return ans
+
+# wow_list = []
+# def self_number(wow):
+# 	wow_int = wow
+# 	if wow_int>=10:
+# 		wow_str = str(wow_int)
+# 		for i in wow_str:
+# 			a = int(i)
+# 			wow_int+=a
+# 	else:
+# 		wow_int+=wow_int
+# 	if wow_int <=10000 and wow_int not in wow_list:
+# 		wow_list.append(wow_int)
+# 		self_number(wow_list[-1])	
+
+# for i in range(10000+1):
+# 	self_number(i)
+# 	if i not in wow_list:
+# 		print(i)
+
+yah = []
+answer = input()
+oh = int(answer)
+for i in range(oh+1):
+	print(i)
+def num_num():
+	wow_str = [i for i in answer]
+	wow_int = [int(i) for i in wow_str]
+	for i in range(len(wow_int)-(len(wow_int)-1)):
+		if len(wow_int) == 4:
+			a,b,c,d = wow_int[i],wow_int[i+1],wow_int[i+2],wow_int[i+3]
+			if d-c == c-b and c-d == b-a:
+				yah.append(wow_int)
+		elif len(wow_int) == 3:
+			a,b,c = wow_int[i],wow_int[i+1],wow_int[i+2]
+			if c-b == b-a:
+				yah.append(wow_int)
+		else:
+			yah.append(wow_int)
+	
+	
+
+
+	
+
