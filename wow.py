@@ -334,28 +334,78 @@
 # 	if i not in wow_list:
 # 		print(i)
 
-yah = []
-answer = input()
-oh = int(answer)
-for i in range(oh+1):
-	print(i)
-def num_num():
-	wow_str = [i for i in answer]
-	wow_int = [int(i) for i in wow_str]
-	for i in range(len(wow_int)-(len(wow_int)-1)):
-		if len(wow_int) == 4:
-			a,b,c,d = wow_int[i],wow_int[i+1],wow_int[i+2],wow_int[i+3]
-			if d-c == c-b and c-d == b-a:
-				yah.append(wow_int)
-		elif len(wow_int) == 3:
-			a,b,c = wow_int[i],wow_int[i+1],wow_int[i+2]
-			if c-b == b-a:
-				yah.append(wow_int)
-		else:
-			yah.append(wow_int)
+# yah = []
+# answer = input()
+# oh = int(answer)
+# def num_num(wow):
+# 	wow = str(wow)
+# 	wow_str = [i for i in wow]
+# 	wow_int = [int(i) for i in wow_str]
+# 	for i in range(len(wow_int)-(len(wow_int)-1)):
+# 		if len(wow_int) == 4:
+# 			a,b,c,d = wow_int[i],wow_int[i+1],wow_int[i+2],wow_int[i+3]
+# 			if d-c == c-b and c-d == b-a:
+# 				yah.append(wow_int)
+# 		elif len(wow_int) == 3:
+# 			a,b,c = wow_int[i],wow_int[i+1],wow_int[i+2]
+# 			if c-b == b-a:
+# 				yah.append(wow_int)
+# 		else:
+# 			yah.append(wow_int)
+# for i in range(1,oh+1):
+# 	num_num(i)
 	
-	
+# print(len(yah))	
 
+# answer = input()
+# if answer:
+# 	print(ord(answer))
 
-	
+# import sys
+# the_number = int(sys.stdin.readline())
+# sum_number = sys.stdin.readline().strip()
+# if len(sum_number) == the_number:
+# 	list_sum_number = [i for i in sum_number]
+# 	int_sum_number = [int(i) for i in list_sum_number]
+# 	print(sum(int_sum_number))
 
+# import sys
+# the_number = int(sys.stdin.readline())
+# answer_list = []
+# def repeat():
+# 	answer = sys.stdin.readline().split(" ")
+# 	index = int(answer[0])
+# 	answer_list.append(answer)
+# 	if len(answer_list) == the_number:
+# 		for i in answer_list:
+# 			before_split = i[1].strip()
+# 			after_split = [i for i in before_split]
+# 			repeat_num = int(i[0])
+# 			list_list = []
+# 			for i in range(len(after_split)):
+# 				wow = after_split[i]*repeat_num
+# 				list_list.append(wow)
+# 			print("".join(list_list))	
+
+# 	else:
+# 		repeat()
+
+# repeat()
+import string
+wow = string.ascii_lowercase
+wow_list = [i for i in wow]
+ob_dict = {}
+for i in range(len(wow_list)):
+	key = wow_list[i]
+	value = i
+	ob_dict[key]=value
+aa = input("").lower()
+result=[]
+for i in wow_list:
+	if i in aa:
+		# result.append(ob_dict[i])
+		a = aa.find(i)
+	else:
+		# result.append("-1")
+		a = "-1"
+	print( a, end=" ")
