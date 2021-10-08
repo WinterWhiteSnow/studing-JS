@@ -61,7 +61,12 @@ a = [2, 4, 8, 16, 23, 28, 38, 49, 62, 70, 77, 91, 101, 103, 107, 115, 122, 127, 
 # 		print(i)
 [{},{},{}]
 wow = {}
-wow["oo"]="oo"
+wow["oo"]="123"
 wow["dd"]="dd"
-wow = "whywwwwwwwwwwwww"
-print(wow.count("w"))
+# result = sorted(sort_list, key=lambda potato: potato['vote_point'], reverse=True) 
+from collections import Counter
+# print(Counter(input().upper()))
+wow = ["ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"]
+print(wow.index("ABC"))
+
+

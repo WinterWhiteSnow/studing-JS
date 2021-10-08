@@ -386,26 +386,126 @@
 # 				wow = after_split[i]*repeat_num
 # 				list_list.append(wow)
 # 			print("".join(list_list))	
-
 # 	else:
 # 		repeat()
-
 # repeat()
-import string
-wow = string.ascii_lowercase
-wow_list = [i for i in wow]
-ob_dict = {}
-for i in range(len(wow_list)):
-	key = wow_list[i]
-	value = i
-	ob_dict[key]=value
-aa = input("").lower()
-result=[]
-for i in wow_list:
-	if i in aa:
-		# result.append(ob_dict[i])
-		a = aa.find(i)
-	else:
-		# result.append("-1")
-		a = "-1"
-	print( a, end=" ")
+
+# import string
+# wow = string.ascii_lowercase
+# wow_list = [i for i in wow]
+# ob_dict = {}
+# for i in range(len(wow_list)):
+# 	key = wow_list[i]
+# 	value = i
+# 	ob_dict[key]=value
+# aa = input("").lower()
+# result=[]
+# for i in wow_list:
+# 	if i in aa:
+# 		a = aa.find(i)
+# 	else:
+# 		a = "-1"
+# 	print( a, end=" ")
+
+# from collections import Counter
+# wow = input("").upper()
+# counter_wow = Counter(wow)
+# rev_result ={}
+# sdict = sorted(counter_wow.values(), reverse=True)
+# for key, value in counter_wow.items():
+# 	rev_result[value]=key
+# if len(sdict) >= 2 :
+# 	if sdict[0] == sdict[1]:
+# 		print("?")
+# 	elif sdict[0] != sdict[1]:
+# 		print(rev_result[sdict[0]].upper())
+# else:
+# 	print(rev_result[counter_wow[wow]])
+
+# wow = input().split(" ")
+# len_answer = len(wow)
+# if wow[0]=="" and wow[-1]=="":
+# 	len_answer-=2
+# elif wow[0]=="" or wow[-1]=="":
+# 	len_answer-=1
+# print(len_answer)
+
+# wow = input().split(" ")
+# list_list = []
+# for i in wow:
+# 	oo = [a for a in i]
+# 	oo.reverse()
+# 	a = "".join(oo)
+# 	list_list.append(a)
+# list_list = [int(i) for i in list_list]
+# av = (list_list[0] + list_list[1])/len(list_list)
+# for i in list_list:
+# 	if av<=i:
+# 		print(i)
+
+# answer = input()
+# wow = ["ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"]
+# index = 0
+# for i in answer:
+# 	for a in wow:
+# 		if i in a:
+# 			index+=wow.index(a)+3
+# print(index)			
+
+# import requests
+# from bs4 import BeautifulSoup
+# why = input()
+# list_list = []
+# index = 0
+# url = "https://www.acmicpc.net/problem/2941"
+# r = requests.get(url)
+# soup = BeautifulSoup(r.text,"html.parser")
+# parent_tag = soup.find("table",{"class":"table table-bordered table-center-20 th-center td-center"})
+# child_tag_list = parent_tag.find_all("tr")
+# for i in child_tag_list:
+# 	wow = i.find_all("td")
+# 	if wow:
+# 		one = wow[0].string
+# 		two = wow[1].string
+# 		list_list.append(two)
+# 		if two in why:
+# 			why = why.replace(two, "")
+# 			index+=1
+# 			print(why,index)
+# print(why)
+# why = [i for i in why]
+# if why:
+# 	index +=len(why)
+# print(index)	
+
+
+# import requests
+# from bs4 import BeautifulSoup
+# why = input()
+# list_list = []
+# index = 0
+# url = "https://www.acmicpc.net/problem/2941"
+# r = requests.get(url)
+# soup = BeautifulSoup(r.text,"html.parser")
+# parent_tag = soup.find("table",{"class":"table table-bordered table-center-20 th-center td-center"})
+# child_tag_list = parent_tag.find_all("tr")
+# for i in child_tag_list:
+# 	wow = i.find_all("td")
+# 	if wow:
+# 		one = wow[0].string
+# 		two = wow[1].string
+# 		list_list.append(two)
+list_list = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+why = input()
+index = 0
+for i in list_list:
+	if i in why:
+		oo = why.count(i)
+		index+=oo
+		why = why.replace(i," ")
+why = why.replace(" ", "")
+if why:
+	why = [i for i in why]
+	index +=len(why)
+print(index)
+				
