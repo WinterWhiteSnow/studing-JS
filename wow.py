@@ -510,34 +510,67 @@
 # 	index +=len(why)
 # print(index)
 
-import sys
-the_number = int(sys.stdin.readline())
-wow_list = []
-while len(wow_list) != the_number:
-	wow = sys.stdin.readline()
-	wow_list.append(wow.strip("\n"))
-new_list= []
-for i in wow_list:
-	dd = [a for a in i]
-	dd_list = []
-	ob = {
-		i:[]
-	}
-	for a in dd:
-		if a not in dd_list:
-			dd_list.append(a)
-		list_list = []
-		for b in dd_list:
-			start = i.find(b)
-			last = i.rfind(b)
-			# print(i,b,i[start+1:last],start,last)
-			if i[start+1:last].replace(b, ""):
-					ob[i].append("True")
-			else:
-				ob[i].append("False")
-	print(ob)		
-	if "True" in ob[i]:
-		pass
+# import sys
+# the_number = int(sys.stdin.readline())
+# wow_list = []
+# while len(wow_list) != the_number:
+# 	wow = sys.stdin.readline()
+# 	wow_list.append(wow.strip("\n"))
+# new_list= []
+# for i in wow_list:
+# 	dd = [a for a in i]
+# 	dd_list = []
+# 	ob = {
+# 		i:[]
+# 	}
+# 	for a in dd:
+# 		if a not in dd_list:
+# 			dd_list.append(a)
+# 		list_list = []
+# 		for b in dd_list:
+# 			start = i.find(b)
+# 			last = i.rfind(b)
+# 			if i[start+1:last].replace(b, ""):
+# 					ob[i].append("True")
+# 			else:
+# 				ob[i].append("False")		
+# 	if "True" in ob[i]:
+# 		pass
+# 	else:
+# 		new_list.append(i)
+# print(len(new_list))
+
+# from sympy import Symbol, solve
+# x=Symbol('x')
+# equation = (b-c)*x+a
+# if solve(equation)[0] > 0:
+# 	print(solve(equation)[0]+1)
+# else:
+# 	print("-1")
+
+# wow = input().split(" ")
+# wow_int = [int(i) for i in wow]
+# a = wow_int[0]
+# b = wow_int[1]
+# c = wow_int[2]
+# try:
+# 	count = -a/(b-c) +1
+# 	if count > 0 :
+# 		print(int(count))
+# 	else:
+# 		print(-1)
+# except:
+# 	print(-1)
+wow = int(input())
+start_num = 2
+end_num = 7
+count = 0
+while True:
+	if end_num <wow:
+		count+=1
+		start_num+=6*count
+		end_num+=6*(count+1)
 	else:
-		new_list.append(i)
-print(len(new_list))
+		print(count+2)
+		break
+	
