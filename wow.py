@@ -495,17 +495,49 @@
 # 		one = wow[0].string
 # 		two = wow[1].string
 # 		list_list.append(two)
-list_list = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-why = input()
-index = 0
-for i in list_list:
-	if i in why:
-		oo = why.count(i)
-		index+=oo
-		why = why.replace(i," ")
-why = why.replace(" ", "")
-if why:
-	why = [i for i in why]
-	index +=len(why)
-print(index)
-				
+
+# list_list = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# why = input()
+# index = 0
+# for i in list_list:
+# 	if i in why:
+# 		oo = why.count(i)
+# 		index+=oo
+# 		why = why.replace(i," ")
+# why = why.replace(" ", "")
+# if why:
+# 	why = [i for i in why]
+# 	index +=len(why)
+# print(index)
+
+import sys
+the_number = int(sys.stdin.readline())
+wow_list = []
+while len(wow_list) != the_number:
+	wow = sys.stdin.readline()
+	wow_list.append(wow.strip("\n"))
+new_list= []
+for i in wow_list:
+	dd = [a for a in i]
+	dd_list = []
+	ob = {
+		i:[]
+	}
+	for a in dd:
+		if a not in dd_list:
+			dd_list.append(a)
+		list_list = []
+		for b in dd_list:
+			start = i.find(b)
+			last = i.rfind(b)
+			# print(i,b,i[start+1:last],start,last)
+			if i[start+1:last].replace(b, ""):
+					ob[i].append("True")
+			else:
+				ob[i].append("False")
+	print(ob)		
+	if "True" in ob[i]:
+		pass
+	else:
+		new_list.append(i)
+print(len(new_list))

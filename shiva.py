@@ -67,6 +67,27 @@ wow["dd"]="dd"
 from collections import Counter
 # print(Counter(input().upper()))
 wow = ["ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"]
-print(wow.index("ABC"))
+# wow = {"why":"what"}
+ab = "abab"
+b = "b"
+
+s = int(input())
+checksum=0
+for i in range(s):
+    n= input()
+    L=[]
+    check=0
+    for i in range(1,len(n)):
+        L.append(n[i-1])
+        if n[i] in L:
+            if n[i]==n[i-1]:
+                continue
+            else:
+                check=1
+    checksum+=check
+print(n,L,n[i])
+print(int(s)-checksum)
+
+
 
 
