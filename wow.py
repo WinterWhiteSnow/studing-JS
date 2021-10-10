@@ -561,16 +561,46 @@
 # 		print(-1)
 # except:
 # 	print(-1)
+
+# wow = int(input())
+# start_num = 2
+# end_num = 7
+# count = 0
+# if wow == 1:
+# 	print(wow)
+# else:
+# 	while wow>1:
+# 		if end_num <wow:
+# 			count+=1
+# 			start_num+=6*count
+# 			end_num+=6*(count+1)
+# 		else:
+# 			print(count+2)
+# 			break
+
+# wow = int(input())
+# num = 1
+# if wow==0 and wow==1:
+# 	print(1)
+# elif 0<=wow<=12:
+# 	for i in range(1,wow+1):
+# 		num*=i
+# print(num)
+
 wow = int(input())
-start_num = 2
-end_num = 7
-count = 0
-while True:
-	if end_num <wow:
-		count+=1
-		start_num+=6*count
-		end_num+=6*(count+1)
-	else:
-		print(count+2)
-		break
-	
+list_list = [0,1]
+if wow == 0:
+	print(list_list[0])
+elif wow == 1:
+	print(list_list[0])
+elif wow>1:
+	while len(list_list)<=wow:
+		for i in range(1,wow):
+			list_list.append(list_list[i-1]+list_list[i])
+	print(list_list)		
+
+		
+		
+		
+
+
