@@ -587,17 +587,18 @@
 # 		num*=i
 # print(num)
 
-wow = int(input())
-list_list = [0,1]
-if wow == 0:
-	print(list_list[0])
-elif wow == 1:
-	print(list_list[0])
-elif wow>1:
-	while len(list_list)<=wow:
-		for i in range(1,wow):
-			list_list.append(list_list[i-1]+list_list[i])
-	print(list_list)		
+# wow = int(input())
+# list_list = [0,1]
+# if wow == 0:
+# 	print(list_list[0])
+# elif wow == 1:
+# 	print(list_list[1])
+# elif wow>1:
+# 	while len(list_list)<=wow:
+# 		for i in range(1,wow):
+# 			list_list.append(list_list[i-1]+list_list[i])
+# 	print(list_list[-1])
+
 
 		
 		

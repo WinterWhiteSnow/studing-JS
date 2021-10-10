@@ -71,22 +71,21 @@ wow = ["ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"]
 ab = "abab"
 b = "b"
 
-s = int(input())
-checksum=0
-for i in range(s):
-    n= input()
-    L=[]
-    check=0
-    for i in range(1,len(n)):
-        L.append(n[i-1])
-        if n[i] in L:
-            if n[i]==n[i-1]:
-                continue
-            else:
-                check=1
-    checksum+=check
-print(n,L,n[i])
-print(int(s)-checksum)
+# s = int(input())
+# checksum=0
+# for i in range(s):
+#     n= input()
+#     L=[]
+#     check=0
+#     for i in range(1,len(n)):
+#         L.append(n[i-1])
+#         if n[i] in L:
+#             if n[i]==n[i-1]:
+#                 continue
+#             else:
+#                 check=1
+#     checksum+=check
+# print(int(s)-checksum)
 
 
 
