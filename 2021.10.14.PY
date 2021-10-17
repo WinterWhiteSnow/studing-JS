@@ -10,8 +10,10 @@ for a in answer_list:
 	room = a[1] #몇번 더 하는가
 	people = [i for i in range(1,room+1)]
 	for b in range(floor):
+		print(b)
 		for c in range(1, room):
 			people[c]+=people[c-1]
+			print(people)
 	print(people[-1])
 # 	if floor == 1:
 # 		for i in range(1,room+1):
