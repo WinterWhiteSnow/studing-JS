@@ -9,7 +9,10 @@ for b in answer_list:
 	start = b[0]
 	end = b[1]
 	distance = end - start
-	print(distance)
+	while distance != 1:
+		if start == 0:
+			distance -=1
+
 # test_case = int(input())
 # answer_list = []
 # while len(answer_list) != test_case:
