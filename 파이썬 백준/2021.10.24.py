@@ -61,14 +61,8 @@ answer = input().split(" ")
 answer = [int(i) for i in answer]
 start = answer[0]
 end = answer[1]
-while start != end:
-	for a in range(start, end+1):
-		print("a",a)
-		if a%start == 0:
-			start+1
-		else:
-			print(a,start)
-			start+=1
-	
-
+for a in range(start, end+1):
+	one = a
+	for i in range(2,a):
+		two = i
 		
