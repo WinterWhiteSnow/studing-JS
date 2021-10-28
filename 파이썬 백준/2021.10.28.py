@@ -26,6 +26,33 @@
 
 
 
+# answer = 123456
+# start = answer
+# end = 2*answer
+# list_list = {}
+# for i in range(2,end+1):
+# 	if i not in list_list:
+# 		for a in range(i,end+1,i):
+# 			list_list[a]=1
+# 		list_list[i]=0
+
+# answer_list = []
+
+# while True:
+# 	wow = int(input())
+# 	wow2 = wow*2
+# 	count = 0
+# 	if wow ==0:
+# 		break
+# 	for key,value in list_list.items():
+# 		if wow2 >= key > wow and value == 0:
+# 			count+=1
+# 	answer_list.append(count)
+
+# for i in answer_list:
+# 	print(i)
+
+
 answer = 123456
 start = answer
 end = 2*answer
@@ -36,6 +63,14 @@ for i in range(2,end+1):
 			list_list[a]=1
 		list_list[i]=0
 
+
+result_list = {}
+for key,value in list_list.items():
+	if value == 0:
+		result_list[key] = value
+
+
+answer_sort = sorted(result_list.keys())
 answer_list = []
 
 while True:
@@ -44,8 +79,8 @@ while True:
 	count = 0
 	if wow ==0:
 		break
-	for key,value in list_list.items():
-		if wow2 >= key > wow and value == 0:
+	for a in answer_sort:
+		if wow < a <= wow2:
 			count+=1
 	answer_list.append(count)
 	
