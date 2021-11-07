@@ -21,16 +21,20 @@ while count != the_num:
 	maxi = (sort_r[0] + sort_r[1])**2
 	distance_x = sort_x[1] - sort_x[0]
 	distance_y = sort_y[1] - sort_y[0]
-	wow = distance_x**2 + distance_y**2
+	wow = (distance_x**2) + (distance_y**2)
 	if mini < wow < maxi:
 		answer_list.append(2)
+	elif wow == mini and wow != 0:
+		answer_list.append(1)
+	elif wow == maxi:
+		answer_list.append(1)
+	elif wow < mini or wow > maxi:
+		answer_list.append(0)
 	elif wow == 0:
 		if sort_r[0] == sort_r[1]:
 			answer_list.append(-1)
-		elif wow < mini or wow > maxi:
+		else:
 			answer_list.append(0)
-	elif wow == mini or wow == maxi:
-		answer_list.append(1)
 for i in answer_list:
 	print(i)
 	
