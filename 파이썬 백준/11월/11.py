@@ -121,4 +121,4 @@ def wow (potato,tomato):
     return greatest,greatest*x*y
 print(wow(start,end)[0])
 print(wow(start,end)[1])
-#64% 실패 21743위
+
