@@ -61,6 +61,91 @@
 #         for a in range(1,a_list[i-1]//i+1):
 #             print(i)
 #백준 30376등
-the_num = nhnhnddd
+
+# import sys
+# from collections import deque
+
+# the_num = int(sys.stdin.readline().rstrip())
+# deq = deque([i for i in range(1,the_num+1)])
+# while len(deq) > 1:
+#     deq.popleft()
+#     deq.rotate(-1)
+# print(deq[0])
 
 
+# import sys
+# from collections import deque
+
+# the_num = int(sys.stdin.readline().rstrip())
+# deq = deque([i for i in range(1,the_num+1)])
+
+# deq.rotate(-2)
+# print(deq)
+
+# import sys
+# from collections import deque
+# the_num = int(sys.stdin.readline().rstrip())
+# deq = deque([])
+# for _ in range(the_num):
+#     b = sys.stdin.readline().rstrip().split()
+#     if b[0] == "push":
+#         deq.append(b[1])
+#     elif b[0] == "pop":
+#         if len(deq) > 0:
+#             print(deq.popleft())            
+#         else:
+#             print(-1)
+#     elif b[0] == "size":
+#         print(len(deq))
+#     elif b[0] == "empty":
+#         if len(deq) == 0:
+#             print(1)
+#         else:
+#             print(0)
+#     elif b[0] == "front":
+#         if len(deq) > 0:
+#             print(deq[0])
+#         else:
+#             print(-1)
+#     elif b[0] == "back":
+#         if len(deq) > 0:
+#             print(deq[-1])
+#         else:
+#             print(-1)
+
+
+
+# import sys
+# from collections import deque
+# the_num = int(sys.stdin.readline().rstrip())
+# deq = deque([])
+# for _ in range(the_num):
+#     b = sys.stdin.readline().rstrip().split()
+#     if b[0] == "push":
+#         deq.append(b[1])
+#     elif b[0] == "pop":
+#         if len(deq) > 0:
+#             print(deq.pop())            
+#         else:
+#             print(-1)
+#     elif b[0] == "size":
+#         print(len(deq))
+#     elif b[0] == "empty":
+#         if len(deq) == 0:
+#             print(1)
+#         else:
+#             print(0)
+#     elif b[0] == "top":
+#         if len(deq) > 0:
+#             print(deq[-1])
+#         else:
+#             print(-1)
+
+import sys
+from collections import deque
+the_num = int(sys.stdin.readline().rstrip())
+a_list = deque([])
+for _ in range(the_num):
+    a = int(sys.stdin.readline().rstrip())
+    a_list.append(a)
+# 백준 29240위

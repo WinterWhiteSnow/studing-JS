@@ -65,32 +65,5 @@
 #                             a_list.insert(len(a_list)//2,aa*i)
 # print(a_list)
 
-end, step = map(int,input().split())
 
-a = [i for i in range(1,end+1)]
-step = step-1
-a_list = []
-count = 0
-while len(a) != 0:
-    print(a_list)
-    print("a",a)
-    if len(a) >=3:
-        for i in range(step, end, 3):
-            print("i",i)
-            if len(a)-1 >i:
-                wow = a[i]
-                a_list.append(wow)
-                count = i
-                
-        a = list(set(a)-set(a_list))
-        b = []
-        for i in a:
-            if i <= count:
-                b.append(i)
-            else:
-                b.insert(0,i)
-        a=b
-    else:
-        for i in a:
-            a_list.append(i)
         
