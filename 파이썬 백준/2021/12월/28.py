@@ -28,11 +28,12 @@
 import sys
 
 while True:
-    x,y,h = map(int, sys.stdin.readline().rstrip().split())
-    if x == 0:
+    t = list(map(int, sys.stdin.readline().rstrip().split()))
+    if 0 in t:
         break
-    a = x**2+y**2
-    if a == h**2:
+    t.sort()
+    a = t[0]**2+t[1]**2
+    if a == t[-1]**2:
         print("right")
     else:
         print("wrong")
