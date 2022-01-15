@@ -66,3 +66,36 @@
 #     else:
 #         print("yes")          
 
+import sys
+
+repeat = int(sys.stdin.readline().rstrip())
+
+for _ in range(repeat):
+    leng,order = map(int, sys.stdin.readline().rstrip().split())
+    n_list = list(map(int, sys.stdin.readline().rstrip().split()))
+    num_goal = n_list[order]
+    dict_list = []
+    count = 0
+    for i in range(len(n_list)):
+        wow = {
+            "order":i,
+            "number":n_list[i]
+        }
+        dict_list.append(wow)
+
+    while 1:
+        max_num = max(n_list)
+        if dict_list[0]["number"] != order:
+            while dict_list[0]["number"] != max_num:
+                dict_list.append(dict_list[0])
+                n_list.append(n_list[0])
+                del dict_list[0]
+                del n_list[0]
+            if dict_list[0]["number"] == max_num:
+                count+=1
+                del dict_list[0]
+                del n_list[0]
+        else:
+            break
+    print(count,n_list,dict_list,count)
+    
