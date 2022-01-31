@@ -177,29 +177,29 @@
 #             plus=0  
 # print(cnt)   
 
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
-a_p = 0
-b_p = 0
-last = "wow"
-for A,B in zip(a,b):
-    if A > B :
-        a_p+=3
-        last = "A"
-    elif B > A:
-        b_p+=3
-        last = "B"
-    else:
-        b_p+=1
-        a_p+=1
-print(a_p,b_p)
-if a_p > b_p:
-    print("A")
-elif a_p < b_p:
-    print("B")
-elif a_p == b_p:
-    if last != "wow":
-        print(last)
-    else:
-        print("D")
+# a = list(map(int,input().split()))
+# b = list(map(int,input().split()))
+# a_p = 0
+# b_p = 0
+# last = "wow"
+# for A,B in zip(a,b):
+#     if A > B :
+#         a_p+=3
+#         last = "A"
+#     elif B > A:
+#         b_p+=3
+#         last = "B"
+#     else:
+#         b_p+=1
+#         a_p+=1
+# print(a_p,b_p)
+# if a_p > b_p:
+#     print("A")
+# elif a_p < b_p:
+#     print("B")
+# elif a_p == b_p:
+#     if last != "wow":
+#         print(last)
+#     else:
+#         print("D")
      
