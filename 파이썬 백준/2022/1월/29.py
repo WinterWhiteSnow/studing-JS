@@ -145,10 +145,20 @@
 # print(a[2:])
 
 import string
-
-lower = list(string.ascii_lowercase)
-n = list(input())
-print(n)
+al = list(string.ascii_lowercase)
+wow_dict = {}
+for _ in range(50):
+    a = input()
+    if len(a) > 0:
+        for i in al:
+            if i not in wow_dict:
+                wow_dict[i]=1
+            else:
+                wow_dict[i]+=1
+list_max = max(list(wow_dict.values))
+wow = [key for key,value in wow_dict.items() if value == list_max]
+print(*wow)
+             
 
 
     
