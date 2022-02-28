@@ -244,8 +244,22 @@
 # s = list(map(int,s.split(",")))
 # print(sum(s))
 
-n = int(input())
-print(bin(n)[2:])
+# n = int(input())
+# print(bin(n)[2:])
+
+# r = int(input())
+# for _ in range(r):
+#     a = list(map(int,input().split(",")))
+#     print(sum(a))
+
+# n = list(input())
+# a = ["a", "e", "i", "o", "u"]
+# cnt=0
+# for i in n:
+#     if i in a:
+#         cnt+=1
+        
+# print(cnt)
     
 
              
